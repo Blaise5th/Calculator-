@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+  <title>Page title</title>
+  <link rel="stylesheet" 
+  href="calculator.css">
+</head>
+<body>
+  <header>
+    <h1>
+      CALCULATOR 
+    </h1>
+  </header>
+  <!-- main input values -->
+  <div class="main">
+  <input 
+  type="number" 
+  id="num1" 
+  placeholder="first input value">
+  <br><br>
+  <input 
+  type="number" 
+  id="num2" 
+  placeholder="second input value">
+  <br><br>
+  <input 
+  type="number" 
+  id="answer" 
+  placeholder="answer">
+  
+  
+  <div class="dropdown">
+    <input type="checkbox" id="dropdown-checkbox">
+    <label
+    for="dropdown-checkbox"
+    id="drop-down">
+    Customize
+    </label>
+      <div class="content">
+  <button 
+  id="drop-down-item"
+  class="auto"
+  onclick="auto()">
+    auto
+  </button>
+  <button 
+  id="drop-down-item"
+  onclick="manual()">
+    manual
+  </button>
+      </div>
+  </div>
+  <br><br>
+  </div>
+  
+  <!-- basic calculations -->
+  <details>
+    <summary>
+      Basic calculations
+    </summary>
+  <div class="container">
+  <button onclick="calc('add')">
+    +
+  </button>
+  <button onclick="calc('sub')">
+    -
+  </button>
+  <button onclick="calc('mul')">
+    x
+  </button>
+  <button onclick="calc('div')">
+    ÷
+  </button>
+  
+  <!-- first input values -->
+  <p>Use <strong>first input value</strong> as the default for this operations</p>
+  
+  <button onclick="firstInput('squRoot')">
+    √
+  </button>
+  <button onclick="firstInput('cubeRoot')">
+    ∛
+  </button>
+  <button onclick="firstInput('squ')">
+    x²
+  </button>
+  <button onclick="firstInput('cube')">
+    x³
+  </button>
+  <br>
+   <button 
+   onclick="otherFirstInput('log')">
+    log
+  </button>
+  <button 
+  onclick="otherFirstInput('antilog')">
+    antilog
+  </button>
+  <br>
+  <button 
+  onclick="otherFirstInput('sin')">
+    sin
+  </button>
+  <button 
+  onclick="otherFirstInput('cos')">
+    cos
+  </button>
+  <button 
+  onclick="otherFirstInput('tan')">
+    tan
+  </button>
+   </div>
+  </details>
+  
+  <!-- second details -->
+  <details class="middle">
+    <summary>
+      Conversion
+    </summary>
+    
+    <!-- Radians to degrees -->
+      <div class="second-details">
+        <fieldset>
+          <legend>
+            Radians to degrees
+          </legend>
+          <input type="number"
+          id="first-field"
+          style="background-color: whitesmoke;"
+          placeholder="radians to degrees">
+        </fieldset>
+        
+       <!--  degrees to radians -->
+        <fieldset>
+          <legend>
+            degrees to radians
+          </legend>
+          <input type="number"
+          id="second-field"
+          style="background-color: whitesmoke;"
+          placeholder="degrees to radians">
+        </fieldset>
+        
+        <!-- Km to miles -->
+        <fieldset>
+          <legend>
+            Km to miles
+          </legend>
+          <input type="number"
+          id="third-field"
+          style="background-color: whitesmoke;"
+          placeholder="kilometers to miles">
+        </fieldset>
+        
+        <!--  Metres to feets  -->
+        <fieldset>
+          <legend>
+            m to fts
+          </legend>
+          <input type="number"
+          id="forth-field"
+          style="background-color: whitesmoke;"
+          placeholder="Meters to feets">
+        </fieldset>
+        
+     <!--  Km/h to m/s  -->
+        <fieldset>
+          <legend>
+            Km/h to m/s
+          </legend>
+          <input type="number"
+          id="fifth-field"
+          style="background-color: whitesmoke;"
+          placeholder="Km/h to m/s">
+        </fieldset>
+      
+        <div class="converted-value">
+      <!-- input of converted value -->
+      <input type="text"
+      id="second-answer" 
+      style="background-color: whitesmoke;">
+        <!-- convert button -->
+        <button 
+    onclick="convert('convert')">
+          convert
+        </button>
+       </div>
+      </div>
+   </details>
+   
+   <!-- Number checker -->
+   <details>
+     <summary>
+       Number checker 
+     </summary>
+     <div>
+       <p>
+Input any number to check if it's even, odd, rational, irrational and natural number
+       </p>
+       <fieldset>
+         <legend>check number</legend>
+         <input 
+         type="number"
+         id="num-checker"
+         style="background-color: whitesmoke;"
+         placeholder="input number">
+         <button onclick="check()">check</button>
+       </fieldset>
+       <textarea rows="5" cols="15" 
+       placeholder="Result" 
+       id="text-area"></textarea>
+     </div>
+   </details>
+<script src="calculator.js"></script>
+</body>
+  </html>
