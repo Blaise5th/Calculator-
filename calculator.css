@@ -1,0 +1,113 @@
+button {
+      cursor: pointer;
+    }
+    body {
+      margin-left: 10px;
+      font-family: aria;
+    }
+    h1 {
+      text-align: center;
+      font-weight: bold;
+    }
+    input {
+      border: solid 1px black;
+    }
+    details {
+      border: dotted 1px cyan;
+      background-color: whitesmoke;
+      border-radius: 10px;
+      padding: 16px;
+    }
+    
+    div .container {
+      margin-left: ;
+    }
+    
+    /* drop down menu */
+    .dropdown {
+ display: inline-block;
+}
+.dropdown #drop-down {
+  border: none;
+  color: whitesmoke;
+  background-color: #4d474ddc;
+  padding: 3px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+  top: -3px;
+}
+
+.dropdown #drop-down-item {
+  display: block;
+  border: none;
+  border-top: solid 1px white;
+  border-bottom: solid 1px white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown .content {
+  display: none;
+  position: absolute;
+  background-color: #c3c3b3eb;
+  color: whitesmoke;
+  min-width: 50px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.75);
+}
+
+.dropdown #dropdown-checkbox:checked + label + .content {
+  display: block;
+}
+
+.dropdown #dropdown-checkbox:checked + label {
+  babackground-color: white;
+}
+
+.dropdown #drop-down-item {
+  opacity: 0.67;
+}
+
+.auto {
+  width: 100%;
+}
+
+/* dark mode code */
+ .dark-mode-input, .dark-mode fieldset input[type="number"] {
+      border: solid 1px white;
+      background-color: transparent;
+      color: white;
+    }
+    .dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode-details {
+  border: solid 1px white;
+  background-color: black;
+}
+
+.dark-mode-button {
+  border: none;
+  background-color: white;
+  font-weight: bolder;
+  border-radius: 3px;
+  color: black;
+}
+
+@media (min-width: 500px) and (max-width: 2560px) {
+  details {
+    margin: 0px 20px;
+  }
+  
+  .middle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .main {
+    margin-left: 20px;
+  }
+  }
